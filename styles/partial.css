@@ -39,19 +39,33 @@ header {
   list-style: none;
   -webkit-padding-start: 0;
           padding-inline-start: 0;
-  justify-content: space-around;
+  justify-content: space-between;
+  margin-bottom: 0;
 }
 
 .header--navigation ul li {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   font-family: primaryfontregular;
+  padding-bottom: 0;
+  width: 50%;
+}
+
+.header--navigation ul span li {
+  border-bottom: solid white;
+  padding-bottom: 10px;
+}
+
+.header--navigation ul span {
+  display: contents;
 }
 
 .header--navigation ul li a {
   color: #ffffff;
   text-decoration: none;
   font-size: 14px;
+  display: flex;
+  justify-content: center;
 }
 
 footer {
@@ -68,11 +82,13 @@ footer {
 .footer--socialmedia h2 {
   font-size: 24px;
   font-family: primaryfontdemi;
+  line-height: 32px;
 }
 
 .footer--contacts h4 {
   font-size: 14px;
   font-family: primaryfontdemi;
+  line-height: 22px;
 }
 
 #footer--containerlogo {
@@ -87,6 +103,7 @@ footer p {
   font-size: 13px;
   font-weight: 400;
   font-family: primaryfontregular;
+  line-height: 18px;
 }
 
 .footer--copyright {
@@ -97,7 +114,8 @@ footer p {
   header {
     flex-wrap: nowrap;
     flex-direction: row;
-    padding: 24px 0;
+    padding: 24px 0 0;
+    align-items: baseline;
   }
 
   .headerfooter--logo {
@@ -111,7 +129,12 @@ footer p {
   }
 
   .header--navigation ul li {
-    padding: 0 36px;
+    padding: 0 36px 36px;
+    width: 0%;
+  }
+
+  .header--navigation ul {
+    justify-content: space-evenly;
   }
 
   .header--navigation ul li a {
@@ -125,11 +148,11 @@ footer p {
   }
 
   #footer--containerlogo {
-    margin-left: 24px;
+    margin-left: 32px;
   }
 
   #footer--containerlogo img {
-    padding: 0 24px;
+    padding: 0 16px;
   }
 
   .footer--socialmedia {
@@ -147,7 +170,7 @@ footer p {
   footer .headerfooter--logo {
     position: relative;
     left: 78%;
-    top: -206px;
+    top: -216px;
   }
 }
 @media (min-width: 1280px) {
@@ -165,5 +188,28 @@ footer p {
   .headerfooter--logo {
     margin-left: 134px;
     margin-right: 24px;
+  }
+
+  #footer--maincontainer {
+    margin: 0 128px;
+  }
+
+  .footer--contacts {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+  }
+
+  .footer--contacts_card1 {
+    padding-right: 60px;
+  }
+
+  .footer--contacts_card2 {
+    padding-right: 60px;
+  }
+
+  footer .headerfooter--logo {
+    left: 76%;
+    top: -216px;
   }
 }/*# sourceMappingURL=partial.css.map */
