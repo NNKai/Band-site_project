@@ -1,0 +1,138 @@
+@font-face {
+  font-family: primaryfontregular;
+  src: url("../3.0 - Assets/font/AvenirNextLTPro-Regular.otf");
+}
+@font-face {
+  font-family: primaryfontbold;
+  src: url("../3.0 - Assets/font/AvenirNextLTPro-Bold.otf");
+}
+@font-face {
+  font-family: primaryfontdemi;
+  src: url("../3.0 - Assets/font/AvenirNextLTPro-Demi.otf");
+}
+.heroimage img {
+  width: 100%;
+  opacity: 85%;
+}
+
+.heroimage--h1 {
+  position: absolute;
+  color: #ffffff;
+  top: 175px;
+  font-size: 24px;
+  left: 16px;
+  font-family: primaryfontdemi;
+  font-weight: 600;
+  background-position: center;
+  background-size: cover;
+  z-index: 1;
+}
+
+.mainbio {
+  margin: 16px;
+  color: #323232;
+}
+
+.mainbio img {
+  width: 100%;
+}
+
+.mainbio--quote {
+  font-family: primaryfontdemi;
+  font-size: 13px;
+}
+
+.mainbio--para {
+  font-family: primaryfontregular;
+  font-size: 13px;
+}
+
+h1 {
+  font-family: primaryfontdemi;
+}
+
+.mainbio--heading {
+  font-family: primaryfontdemi;
+  font-size: 14px;
+}
+
+.photos {
+  margin: 20px 16px 0px;
+  color: #323232;
+}
+
+.photos img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+  .heroimage--h1 {
+    font-size: 60px;
+    font-weight: 700;
+    top: 300px;
+    left: 36px;
+  }
+
+  .mainbio {
+    margin: 36px;
+  }
+
+  .mainbio--container {
+    margin: 0 36px;
+  }
+
+  .mainbio--para {
+    -moz-column-count: 2;
+         column-count: 2;
+    display: flex;
+    gap: 50px;
+    font-size: 14px;
+  }
+
+  .photos--sizing {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+  }
+
+  .photos--sizing img {
+    width: 28%;
+    margin-bottom: 0px;
+    padding: 12px;
+  }
+
+  .photos {
+    margin: 0;
+    background-color: azure;
+    padding-bottom: 24px;
+    padding-top: 24px;
+  }
+
+  .photos h1 {
+    margin-left: 36px;
+  }
+}
+@media (min-width: 1280px) {
+  .heroimage--h1 {
+    top: 30%;
+    left: 10%;
+  }
+
+  .mainbio {
+    margin: 24px 128px 16px;
+  }
+
+  .mainbio--container {
+    margin: 0 70px;
+  }
+
+  .mainbio--container img {
+    min-height: 300px;
+    max-height: 500px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}/*# sourceMappingURL=bio.css.map */
