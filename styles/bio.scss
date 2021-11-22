@@ -187,9 +187,10 @@ $fontcoloronwhite: #323232;
         }
 
         .mainbio--container img {
-            min-height: 300px;
+            min-height: fit-content;
             max-height: 500px;
             object-fit: cover;
+            object-position: bottom;
         }
 
         .photos h1 {

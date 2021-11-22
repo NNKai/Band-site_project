@@ -173,10 +173,14 @@
   }
 
   .mainbio--container img {
-    min-height: 300px;
+    min-height: -webkit-fit-content;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
     max-height: 500px;
     -o-object-fit: cover;
        object-fit: cover;
+    -o-object-position: bottom;
+       object-position: bottom;
   }
 
   .photos h1 {
