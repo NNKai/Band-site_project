@@ -125,6 +125,14 @@ th {
 }
 
 @media (min-width: $tablet) {
+
+    .showdates{
+        h1 {
+            margin-left: 36px;
+            font-size: 36px;
+            font-family: primaryfontdemi;
+        }
+    }
     .heroshowsimage{
 
         img {
@@ -159,6 +167,47 @@ th {
             top: -219px;
             left: 10px;
             margin-bottom: -155px;
+         
+            iframe{
+                height: 150px;
+                width: 60%;
+            }
+        }
+    }
+
+    
+}
+
+@media (min-width: $desktop) {
+    .showdates{
+        h1 {
+            margin-left: 124px;
+            font-size: 60px;
+            font-family: primaryfontdemi;
+        }
+    }
+    .heroshowsimage{
+
+        h3 {
+            font-size: 24px;
+            font-family: primaryfontdemi;
+            left: 112px;
+            top: 180px;
+        }
+    
+        .heroimage--h1{
+            font-size: 60px;
+            font-weight: 700;
+            margin: 175px 0 0 90px;
+            line-height: 68px;
+            top: 71px;
+        }
+
+        .soundcloud{
+            top: -380px;
+            left: 383px;
+            margin-bottom: -155px;
+            width: 50%;
          
             iframe{
                 height: 150px;

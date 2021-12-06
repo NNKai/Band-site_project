@@ -12,11 +12,30 @@ let comment = [
      "body":"I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough."},
 ];
 
-let displayContent = document.getElementById("commentcontainer");
-// const addComment = document.createElement("addComment")
+// let displayContent = document.getElementById("commentcontainer")
 
-// addComment.textContent = "Connor Walton"
+// displayContent.innerText = 'Connor Walton' + '02/17/2021' + 'This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.'
 
-console.log(displayContent.innerText);
+// let divElement = document.createElement('div');
 
-// displayContent.innerText = comment[{}]
+// let addComment = document.createTextNode('This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.');
+
+// divElement.appendChild(addComment);
+
+// let containerDiv = document.querySelector('.commentcontainer');
+
+const form = document.querySelector('form');
+const commentSection = document.querySelector ('.commentcontainer1')
+
+function addAComment(e) {
+    e.preventDefault();
+    const name = document.getElementById("name").value;
+    const comments = document.getElementById("comments").value;
+    commentSection.innerHTML += `
+        <h3>${name}</h3>
+        <p>${comments}</p>
+
+    `;
+}
+
+form.addEventListener('submit', addAComment);

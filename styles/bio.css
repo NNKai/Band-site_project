@@ -179,14 +179,18 @@ form button h3 {
   font-family: primaryfontregular;
 }
 
-#commentcontainer p {
+.commentcontainer1 {
+  margin-left: 45px;
+}
+
+.commentcontainer p {
   font-size: 13px;
 }
-#commentcontainer h3 {
+.commentcontainer h3 {
   margin: 0;
   font-size: 13px;
 }
-#commentcontainer .date {
+.commentcontainer .date {
   font-size: 13px;
   color: #afafaf;
 }
@@ -252,7 +256,7 @@ form button h3 {
 
   .photos {
     margin: 0;
-    background-color: azure;
+    background-color: #FAFAFA;
     padding-bottom: 24px;
     padding-top: 24px;
   }
@@ -260,6 +264,56 @@ form button h3 {
   .photos h1 {
     margin-left: 36px;
     font-size: 36px;
+  }
+
+  #form {
+    margin: 20px 36px 0px;
+  }
+  #form .form--h1 {
+    font-family: primaryfontregular;
+    font-size: 36px;
+  }
+
+  form {
+    margin: 0 116px 0 116px;
+  }
+
+  .leftPanelImg {
+    width: 48px;
+    height: 48px;
+    float: left;
+    position: relative;
+    bottom: -10px;
+    margin-left: 64px;
+  }
+  .leftPanelImg img {
+    width: 100%;
+    border-radius: 50%;
+  }
+  .leftPanelImg span img {
+    position: relative;
+    bottom: -20px;
+  }
+
+  .rightPanel {
+    margin-left: 1%;
+    width: 70%;
+  }
+
+  .commentcontainer p {
+    font-size: 16px;
+  }
+  .commentcontainer h3 {
+    margin: 0;
+    font-size: 16px;
+  }
+  .commentcontainer .date {
+    font-size: 16px;
+    color: #afafaf;
+  }
+
+  .commentcontainer1 {
+    margin-left: 120px;
   }
 }
 @media (min-width: 1280px) {
@@ -296,5 +350,43 @@ form button h3 {
 
   .mainbio--quote {
     max-width: 81%;
+  }
+
+  #form {
+    margin: 20px 128px 0px;
+  }
+  #form .form--h1 {
+    font-family: primaryfontregular;
+    font-size: 36px;
+  }
+
+  form {
+    margin: 0 200px 0 318px;
+  }
+
+  .leftPanelImg {
+    max-width: 48px;
+    max-height: 48px;
+    float: left;
+    position: relative;
+    bottom: -10px;
+    margin-left: 266px;
+  }
+  .leftPanelImg img {
+    width: 100%;
+    border-radius: 50%;
+  }
+  .leftPanelImg span img {
+    position: relative;
+    bottom: -10px;
+  }
+
+  .rightPanel {
+    margin-left: 1%;
+    width: 50%;
+  }
+
+  .commentcontainer1 {
+    margin-left: 325px;
   }
 }/*# sourceMappingURL=bio.css.map */

@@ -214,7 +214,11 @@ form {
     
 }
 
-#commentcontainer {
+.commentcontainer1 {
+    margin-left: 45px;
+}
+
+.commentcontainer {
     p {
         font-size: 13px;
     }
@@ -292,7 +296,7 @@ form {
 
     .photos {
         margin: 0;
-        background-color: azure;
+        background-color: #FAFAFA;
         padding-bottom: 24px;
         padding-top: 24px;
     }
@@ -300,6 +304,68 @@ form {
     .photos h1 {
         margin-left: 36px;
         font-size: 36px;
+    }
+
+    #form {
+        margin: 20px 36px 0px;
+    
+        .form--h1 {
+            font-family: primaryfontregular;
+            font-size: 36px;
+        }
+        
+    }
+
+    form {
+        margin: 0 116px 0 116px;
+    }
+
+    .leftPanelImg {
+        width: 48px;
+        height: 48px;
+        // height: 60px;
+        float: left;
+        position: relative;
+        bottom: -10px;
+        margin-left: 64px;
+        
+    
+        img {
+            width: 100%;
+            border-radius: 50%;
+        }
+    
+        span {
+            img {
+                position: relative;
+                bottom: -20px;
+            }
+        }
+    }
+
+    .rightPanel {
+        margin-left: 1%;
+        width: 70%;
+    }
+
+    .commentcontainer {
+        p {
+            font-size: 16px;
+        }
+    
+        h3 {
+            margin: 0;
+            font-size: 16px;
+        }
+    
+        .date {
+            font-size: 16px;
+            color: #afafaf;
+        }
+    }
+
+    .commentcontainer1 {
+        margin-left: 120px;
     }
 
 }
@@ -337,6 +403,52 @@ form {
 
         .mainbio--quote {
             max-width: 81%;
+        }
+
+        #form {
+            margin: 20px 128px 0px;
+        
+            .form--h1 {
+                font-family: primaryfontregular;
+                font-size: 36px;
+            }
+            
+        }
+    
+        form {
+            margin: 0 200px 0 318px;
+        }
+    
+        .leftPanelImg {
+            max-width: 48px;
+            max-height: 48px;
+            // height: 60px;
+            float: left;
+            position: relative;
+            bottom: -10px;
+            margin-left: 266px;
+            
+        
+            img {
+                width: 100%;
+                border-radius: 50%;
+            }
+        
+            span {
+                img {
+                    position: relative;
+                    bottom: -10px;
+                }
+            }
+        }
+    
+        .rightPanel {
+            margin-left: 1%;
+            width: 50%;
+        }
+    
+        .commentcontainer1 {
+            margin-left: 325px;
         }
 
 }
