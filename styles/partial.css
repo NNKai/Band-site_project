@@ -33,7 +33,6 @@ header {
 .header--navigation {
   width: 100%;
 }
-
 .header--navigation ul {
   display: flex;
   list-style: none;
@@ -42,7 +41,6 @@ header {
   justify-content: space-between;
   margin-bottom: 0;
 }
-
 .header--navigation ul li {
   display: flex;
   justify-content: center;
@@ -50,16 +48,6 @@ header {
   padding-bottom: 0;
   width: 50%;
 }
-
-.header--navigation ul span li {
-  border-bottom: solid white;
-  padding-bottom: 10px;
-}
-
-.header--navigation ul span {
-  display: contents;
-}
-
 .header--navigation ul li a {
   color: #ffffff;
   text-decoration: none;
@@ -67,47 +55,47 @@ header {
   display: flex;
   justify-content: center;
 }
+.header--navigation ul span {
+  display: contents;
+}
+.header--navigation ul span li {
+  border-bottom: solid white;
+  padding-bottom: 10px;
+}
 
 footer {
   background-color: #323232;
   color: #ffffff;
 }
-
-#footer--maincontainer {
+footer #footer--maincontainer {
   margin: 0 16px;
   padding: 10px 0;
   font-family: primaryfontregular;
 }
-
-.footer--socialmedia h2 {
+footer .footer--socialmedia h2 {
   font-size: 24px;
   font-family: primaryfontdemi;
   line-height: 32px;
 }
-
-.footer--contacts h4 {
+footer .footer--contacts h4 {
   font-size: 14px;
   font-family: primaryfontdemi;
   line-height: 22px;
 }
-
-#footer--containerlogo {
+footer #footer--containerlogo {
   display: flex;
 }
-
-#footer--containerlogo img {
+footer #footer--containerlogo img {
   padding: 0 24px 0 0;
 }
-
+footer .footer--copyright {
+  margin-top: 24px;
+}
 footer p {
   font-size: 13px;
   font-weight: 400;
   font-family: primaryfontregular;
   line-height: 18px;
-}
-
-.footer--copyright {
-  margin-top: 24px;
 }
 
 @media (min-width: 768px) {

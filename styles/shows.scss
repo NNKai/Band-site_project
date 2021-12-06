@@ -1,0 +1,169 @@
+$headerfooterbkgoundcolor: #323232;
+$primaryfontcolor: #ffffff;
+$secondaryfontcolor:#323232;
+// $primaryfont: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+$tablet: 768px;
+$desktop: 1280px;
+$fontcoloronwhite: #323232;
+
+@font-face {
+    font-family: primaryfontregular;
+    src: url("../3.0\ -\ Assets/font/AvenirNextLTPro-Regular.otf");
+}
+
+@font-face {
+    font-family: primaryfontbold;
+    src: url("../3.0\ -\ Assets/font/AvenirNextLTPro-Bold.otf");
+}
+
+@font-face {
+    font-family: primaryfontdemi;
+    src: url("../3.0\ -\ Assets/font/AvenirNextLTPro-Demi.otf");
+}
+
+
+.heroshowsimage {
+    margin-bottom: -24px;
+    // padding-bottom: 36px;
+    display: flex;
+    background-color: #323232;
+    flex-wrap: wrap;
+
+    img {
+        width: 100%;
+        opacity: 50%;
+    }
+
+    .soundcloud {
+        position: relative;
+        top: -130px;
+        // right: -4%;
+        margin: 0 auto;
+        width: 92%;
+        margin-bottom: -104px;
+    }
+
+    h3 {
+        position: absolute;
+        top: 107px;
+        left: 16px;
+        color: $primaryfontcolor;
+        font-family: primaryfontprimary;
+        z-index: 1;
+        font-weight: 400;
+        font-size: 16px;
+    }
+
+    h1 {
+        top: 145px;
+    }
+}
+
+.showdates {
+    // margin-left: 16px;
+    padding-top: 36px;
+    padding-bottom: 24px;
+
+    h1 {
+        margin-left: 16px;
+        font-family: primaryfontdemi;
+        // font-weight: 700;
+    }
+
+    .showdates--containers {
+        border-bottom: solid grey 1px;
+        font-family: primaryfontregular;
+        font: $fontcoloronwhite;
+
+        h4 {
+            margin-left: 16px;
+            text-transform: uppercase;
+            font-size: 12px;
+            color: grey;
+        }
+
+        p {
+            margin-left: 16px;
+            font-size: 14px;
+        }
+
+            button {
+                background-color: $fontcoloronwhite;
+                color: $primaryfontcolor;
+                margin: 0 auto 16px;
+                width: 91%;
+                display: flex;
+                justify-content: center;
+                border-radius: 5%;
+                border: 0;
+
+                p {
+                    margin: 0;
+                    font-size: 16px;
+                    padding: 16px 0;
+                    font-family: primaryfontdemi;
+                    text-transform: uppercase;
+                    
+                }
+            }
+    }
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #cccccc;
+    padding: 05px;
+}
+
+th {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+@media (min-width: $tablet) {
+    .heroshowsimage{
+
+        img {
+            // margin: 175px 0 0 24px;
+        background-position: center;
+        background-size: cover;
+        max-height: 520px;
+        min-height: 450px;
+        min-width: 100%;
+        max-width: 100%;
+        background-position: center;
+        background-size: cover;
+        object-fit: cover;
+        }
+
+        h3 {
+            font-size: 24px;
+            font-family: primaryfontdemi;
+            left: 40px;
+            top: 145px;
+        }
+    
+        .heroimage--h1{
+            font-size: 60px;
+            font-weight: 700;
+            margin: 175px 0 0 24px;
+            line-height: 68px;
+            top: 44px;
+        }
+
+        .soundcloud{
+            top: -219px;
+            left: 10px;
+            margin-bottom: -155px;
+         
+            iframe{
+                height: 150px;
+                width: 60%;
+            }
+        }
+    }
+}
