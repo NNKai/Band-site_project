@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/bio.css">
     <link rel="stylesheet" href="./styles/partial.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js" integrity="sha512-u9akINsQsAkG9xjc1cnGF4zw5TFDwkxuc9vUp5dltDWYCSmyd0meygbvgXrlc/z7/o4a19Fb5V0OUE58J7dcyw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>Document</title>
 </head>
 <body>
@@ -64,7 +65,7 @@
                 <img src="./3.0 - Assets/Images/Photo-gallery-9.jpg" alt="image9"></div>
         </section>
 
-        <section id="form">
+        <section id="form" method =>
             <h1 class="form--h1">Join the Conversation</h1>
             <div class="leftPanelImg"><span><img src="./3.0 - Assets/Images/Mohan-muruge.jpg"></span></div>
             <form action="#">
@@ -73,52 +74,21 @@
                 <label for="name"><p>Comment</p></label><br>
                 <textarea id="comments" name="comment" id="" cols="30" rows="05" placeholder="Add your comment here"></textarea>
                 <button class="addAComment"><h3>Comment</h3></button>
+
+                
             </form>
-
-            <div class="commentcontainer1"></div>
-            <div class="commentcontainer">
-                <div class="commentbox">
-                    <div class="leftPanelImg"><img src="./3.0 - Assets/Images/Mohan-muruge.jpg"></div>
-                    <div class="rightPanel">
-                        <span><h3>Connor Walton</h3></span>
-                        <div class="date">02/17/2021</div>
-                        <p>
-                            This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.
-                        </p>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-            </div>
-
-            <div class="commentcontainer">
-                <div class="commentbox">
-                    <div class="leftPanelImg"><img src="./3.0 - Assets/Images/Mohan-muruge.jpg"></div>
-                    <div class="rightPanel">
-                        <span><h3>Emilie Beach</h3></span>
-                        <div class="date">01/09/2021</div>
-                        <p>
-                            I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.
-                        </p>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-            </div>
-
-            <div class="commentcontainer">
-                <div class="commentbox">
-                    <div class="leftPanelImg"><img src="./3.0 - Assets/Images/Mohan-muruge.jpg"></div>
-                    <div class="rightPanel">
-                        <span><h3>Miles Acosta</h3></span>
-                        <div class="date">12/20/2020</div>
-                        <p>
-                            I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.
-                        </p>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-            </div>
-            
         </section>
+        <div class="underline"></div>
+
+            <section id="commentcontainer1">
+                <div class="underline"></div>
+                <!-- <img alt="Avatar" id="avatar"> -->
+                <!-- <div class="leftPanelImg"><img src="./3.0 - Assets/Images/Mohan-muruge.jpg"></div> -->
+            </section>
+
+
+            
+        
 
     </main>
     <footer>

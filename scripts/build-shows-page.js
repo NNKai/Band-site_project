@@ -1,27 +1,46 @@
-let showsInfo = [
-    { date: 'Mon Sept 06 2021', venue: 'Ronald Lane', location:'San Fransisco'},
-    { date: 'Tue Sept 21 2021', venue: 'Pier 3 East', location:'San Fransisco'},
-    { date: 'Fri Oct 15 2021', venue: 'View Lounge', location:'San Fransisco'},
-    { date: 'Sat Nov 06 2021', venue: 'Hyatt Agency', location:'San Fransisco'},
-    { date: 'Fri Nov 26 2021', venue: 'Moscow Center', location:'San Fransisco'},
-    { date: 'Wed Dec 15 2021', venue: 'Press Club', location:'San Fransisco'},
-];
+let myKey = "a0098080-f123-4319-9617-26b9c037ccdc";
 
-window.onload = () => {
-    loadTable(showsInfo)
-}
+let n = axios.get(`https://project-1-api.herokuapp.com/showdates?api_key=${myKey}`)
 
-loadTable(showsInfo);
+.then((result)=>{
+    return result.data
+}).then((completeData)=>{
+    
+    let data1="";
+    completeData.map((values)=>{
 
-function loadTable(showsInfo){
-    const tableBody = document.getElementById('showsData');
-    let dataHtml = '' ;
+        let myTimeStamp = values.date;
 
-    for (let shows of showsInfo) {
-        dataHtml +=`<tr><td>${shows.date}</td><td>${shows.venue}</td><td>${shows.location}</td></tr>`;
-    }
+        let d = new Date(myTimeStamp);
+        let formattedDate = d.getDate() + "-" + (d.getMonth() + 1) + "-" + d.getFullYear();
+        let dateString= formattedDate;
+        dateString = new Date(dateString).toDateString();
+        dateString = dateString.split(' ').slice(0, 4).join(' ');
+        
+        data1+=`
 
-    console.log(dataHtml)
+        <div class="shows--venuedateplace">
+            <div class="headerdate--container">
+                <p class="shows--header">Date</p>
+                <p class="shows--date">${dateString}</p>
+            </div>
+            <div class="venue--container">
+                <p class="shows--header">Venue</p>
+                <p class="shows--place">${values.place}</p>
+            </div>
+            <div class="location--container">
+                <p class="shows--header">Location</p>
+                <p class="shows--location">${values.location}</p>
+            </div>
+        <button><h2>BUY TICKETS</h2></button>
 
-    tableBody.innerHTML = dataHtml;
-}
+        </div>
+        <div class="underline"></div>
+    `;
+    })
+
+    document.getElementById("showdates--containers").innerHTML=data1;
+}).catch((err)=> {
+    console.log(err);
+})
+

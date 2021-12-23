@@ -10,6 +10,10 @@
   font-family: primaryfontdemi;
   src: url("../3.0 - Assets/font/AvenirNextLTPro-Demi.otf");
 }
+.showsheaderbar {
+  display: none;
+}
+
 .heroshowsimage {
   margin-bottom: -24px;
   display: flex;
@@ -32,13 +36,19 @@
   top: 107px;
   left: 16px;
   color: #ffffff;
-  font-family: primaryfontprimary;
+  font-family: primaryfontregular;
   z-index: 1;
   font-weight: 400;
   font-size: 16px;
 }
-.heroshowsimage h1 {
-  top: 145px;
+.heroshowsimage .heroimage--h1 {
+  position: absolute;
+  top: 150px;
+  color: #ffffff;
+  margin-left: 16px;
+  z-index: 1;
+  font-size: 24px;
+  font-family: primaryfontregular;
 }
 
 .showdates {
@@ -49,61 +59,55 @@
   margin-left: 16px;
   font-family: primaryfontdemi;
 }
-.showdates .showdates--containers {
-  border-bottom: solid grey 1px;
-  font-family: primaryfontregular;
-  font: #323232;
+.showdates #showdates--containers {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
-.showdates .showdates--containers h4 {
-  margin-left: 16px;
-  text-transform: uppercase;
-  font-size: 12px;
-  color: grey;
-}
-.showdates .showdates--containers p {
-  margin-left: 16px;
-  font-size: 14px;
-}
-.showdates .showdates--containers button {
+.showdates #showdates--containers button {
   background-color: #323232;
   color: #ffffff;
-  margin: 0 auto 16px;
-  width: 91%;
-  display: flex;
-  justify-content: center;
-  border-radius: 5%;
-  border: 0;
-}
-.showdates .showdates--containers button p {
-  margin: 0;
-  font-size: 16px;
-  padding: 16px 0;
-  font-family: primaryfontdemi;
+  font-family: primaryfontregular;
+  border: none;
+  border-radius: 4%;
+  width: 100%;
+  margin: 0 auto;
+  font-size: 10px;
+  line-height: 20px;
+  font-weight: 700;
   text-transform: uppercase;
 }
-
-table {
-  border-collapse: collapse;
+.showdates #showdates--containers .showsheaderbar {
+  display: none;
+}
+.showdates #showdates--containers .shows--header {
+  color: #AFAFAF;
+  font-family: primaryfontregular;
+  font-size: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+}
+.showdates #showdates--containers .shows--venuedateplace {
+  font-family: primaryfontregular;
+  font-size: 13px;
+  border: none;
+  padding: 16px;
+  width: 90%;
+}
+.showdates #showdates--containers .shows--venuedateplace .shows--date {
+  font-weight: bold;
+}
+.showdates #showdates--containers .show--date {
+  font-weight: 700;
+}
+.showdates #showdates--containers .underline {
+  border-bottom: solid 1px #AFAFAF;
+  opacity: 50%;
   width: 100%;
 }
 
-td, th {
-  border: 1px solid #cccccc;
-  padding: 5px;
-}
-
-th {
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
 @media (min-width: 768px) {
-  .showdates h1 {
-    margin-left: 36px;
-    font-size: 36px;
-    font-family: primaryfontdemi;
-  }
-
   .heroshowsimage img {
     background-position: center;
     background-size: cover;
@@ -125,7 +129,7 @@ th {
   .heroshowsimage .heroimage--h1 {
     font-size: 60px;
     font-weight: 700;
-    margin: 175px 0 0 24px;
+    margin: 175px 0 0 40px;
     line-height: 68px;
     top: 44px;
   }
@@ -138,30 +142,88 @@ th {
     height: 150px;
     width: 60%;
   }
+
+  .shows--header:not(.shows--header ~ .shows--header) {
+    display: none;
+  }
+
+  .showsheaderbar {
+    display: flex;
+    justify-content: space-between;
+    width: 53%;
+    margin-left: 41px;
+    text-transform: uppercase;
+    font-family: primaryfontregular;
+    font-size: 16px;
+    color: #AFAFAF;
+    font-weight: bold;
+  }
+
+  .showdates h1 {
+    margin-left: 36px;
+    font-size: 36px;
+    font-family: primaryfontdemi;
+  }
+  .showdates #showdates--containers {
+    margin: 0 24px 0 24px;
+  }
+  .showdates #showdates--containers .shows--venuedateplace {
+    width: 96%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .showdates #showdates--containers .shows--venuedateplace button {
+    width: 25%;
+    margin: 0;
+  }
 }
 @media (min-width: 1280px) {
+  .showdates {
+    padding-top: 100px;
+    margin-left: 200px;
+  }
+  .showdates p {
+    font-size: 14px;
+    line-height: 22px;
+  }
   .showdates h1 {
     margin-left: 124px;
     font-size: 60px;
     font-family: primaryfontdemi;
+    position: absolute;
+    top: 760px;
+    left: -25px;
+  }
+  .showdates .showsheaderbar {
+    width: 42%;
+    position: relative;
+    left: 161px;
+  }
+  .showdates #showdates--containers {
+    width: 80%;
+    position: relative;
+    right: -160px;
   }
 
   .heroshowsimage h3 {
     font-size: 24px;
     font-family: primaryfontdemi;
-    left: 112px;
-    top: 180px;
+    left: 130px;
+    top: 210px;
   }
   .heroshowsimage .heroimage--h1 {
     font-size: 60px;
     font-weight: 700;
-    margin: 175px 0 0 90px;
+    margin: 175px 0 0 124px;
     line-height: 68px;
-    top: 71px;
+    top: 119px;
+  }
+  .heroshowsimage img {
+    max-height: 660px;
   }
   .heroshowsimage .soundcloud {
-    top: -380px;
-    left: 383px;
+    top: -480px;
+    left: 400px;
     margin-bottom: -155px;
     width: 50%;
   }

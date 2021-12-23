@@ -108,25 +108,11 @@
 .leftPanelImg img {
   width: 100%;
   border-radius: 50%;
+  height: 34px;
 }
 .leftPanelImg span img {
   position: relative;
-  bottom: -20px;
-}
-
-.rightPanel {
-  width: 83%;
-  float: left;
-  margin-left: 3%;
-}
-.rightPanel span {
-  float: left;
-}
-.rightPanel .date {
-  float: right;
-}
-.rightPanel p {
-  display: inline-flex;
+  bottom: -10px;
 }
 
 .clear {
@@ -179,20 +165,40 @@ form button h3 {
   font-family: primaryfontregular;
 }
 
-.commentcontainer1 {
-  margin-left: 45px;
+#commentcontainer1 {
+  margin: 0 16px;
+  font-size: 13px;
+  font-family: primaryfontregular;
+}
+#commentcontainer1 .comment--namedates {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 50px;
+}
+#commentcontainer1 .comment--namedates .comment--names {
+  font-weight: bold;
+}
+#commentcontainer1 .comment--namedates .comment--dates {
+  color: #afafaf;
+}
+#commentcontainer1 .backgroundavatar {
+  float: left;
+  max-width: 36px;
+  background-color: #E1E1E1;
+  height: 36px;
+  border-radius: 50%;
+  position: relative;
+  top: 12px;
+}
+#commentcontainer1 .comment--body {
+  margin: 0 0 0 50px;
+}
+#commentcontainer1 .likes {
+  margin: 8px 0 8px 50px;
 }
 
-.commentcontainer p {
-  font-size: 13px;
-}
-.commentcontainer h3 {
-  margin: 0;
-  font-size: 13px;
-}
-.commentcontainer .date {
-  font-size: 13px;
-  color: #afafaf;
+.comment-section {
+  display: flow-root;
 }
 
 @media (min-width: 768px) {
@@ -270,8 +276,12 @@ form button h3 {
     margin: 20px 36px 0px;
   }
   #form .form--h1 {
-    font-family: primaryfontregular;
+    font-family: primaryfontdemi;
     font-size: 36px;
+  }
+
+  #comments, #name {
+    width: 110%;
   }
 
   form {
@@ -287,33 +297,24 @@ form button h3 {
     margin-left: 64px;
   }
   .leftPanelImg img {
-    width: 100%;
+    width: 82%;
     border-radius: 50%;
+    height: 36px;
   }
   .leftPanelImg span img {
     position: relative;
-    bottom: -20px;
+    bottom: -10px;
   }
 
-  .rightPanel {
-    margin-left: 1%;
-    width: 70%;
+  #commentcontainer1 {
+    margin: 0 100px;
   }
 
-  .commentcontainer p {
-    font-size: 16px;
-  }
-  .commentcontainer h3 {
-    margin: 0;
-    font-size: 16px;
-  }
-  .commentcontainer .date {
-    font-size: 16px;
-    color: #afafaf;
-  }
-
-  .commentcontainer1 {
-    margin-left: 120px;
+  .addAComment {
+    width: 30%;
+    border-radius: 5%;
+    position: relative;
+    left: 81%;
   }
 }
 @media (min-width: 1280px) {
@@ -359,9 +360,12 @@ form button h3 {
     font-family: primaryfontregular;
     font-size: 36px;
   }
+  #form #name {
+    height: 60px;
+  }
 
   form {
-    margin: 0 200px 0 318px;
+    margin: 0 349px 0 385px;
   }
 
   .leftPanelImg {
@@ -379,6 +383,9 @@ form button h3 {
   .leftPanelImg span img {
     position: relative;
     bottom: -10px;
+    height: 146%;
+    width: 155%;
+    left: 30px;
   }
 
   .rightPanel {
@@ -386,7 +393,20 @@ form button h3 {
     width: 50%;
   }
 
-  .commentcontainer1 {
-    margin-left: 325px;
+  #commentcontainer1 {
+    margin: 0 426px 0 426px;
+  }
+  #commentcontainer1 .backgroundavatar {
+    height: 70px;
+    max-width: 70px;
+  }
+  #commentcontainer1 .comment--namedates {
+    margin-left: 84px;
+  }
+  #commentcontainer1 .comment--body {
+    margin: 0 0 0 84px;
+  }
+  #commentcontainer1 .likes {
+    margin: 8px 0 8px 84px;
   }
 }/*# sourceMappingURL=bio.css.map */

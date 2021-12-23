@@ -128,32 +128,14 @@ $bordercolor: #E1E1E1;
     img {
         width: 100%;
         border-radius: 50%;
+        height: 34px;
     }
 
     span {
         img {
             position: relative;
-            bottom: -20px;
+            bottom: -10px;
         }
-    }
-}
-
-.rightPanel{
-    width: 83%;
-    // height: 60px;
-    float: left;
-    margin-left: 3%;
-
-    span {
-        float: left;
-    }
-
-    .date {
-        float: right;
-    }
-
-    p {
-        display: inline-flex;
     }
 }
 
@@ -214,24 +196,49 @@ form {
     
 }
 
-.commentcontainer1 {
-    margin-left: 45px;
+#commentcontainer1 {
+    margin: 0 16px;
+
+    font-size: 13px;
+    font-family: primaryfontregular;
+
+    .comment--namedates{
+        display: flex;
+        justify-content: space-between;
+        margin-left: 50px;
+
+        .comment--names{
+            font-weight: bold;
+        }
+
+        .comment--dates{
+            color: #afafaf
+        }
+    }
+
+    .backgroundavatar{
+        float: left;
+        max-width: 36px;
+        background-color: #E1E1E1;
+        height: 36px;
+        border-radius: 50%;
+        position: relative;
+        top: 12px;
+    }
+
+    
+    .comment--body{
+        margin: 0 0 0 50px;
+    }
+
+    .likes{
+        margin: 8px 0 8px 50px;
+    }
+    
 }
 
-.commentcontainer {
-    p {
-        font-size: 13px;
-    }
-
-    h3 {
-        margin: 0;
-        font-size: 13px;
-    }
-
-    .date {
-        font-size: 13px;
-        color: #afafaf;
-    }
+.comment-section{
+    display: flow-root;
 }
 
 @media (min-width: $tablet) {
@@ -310,10 +317,14 @@ form {
         margin: 20px 36px 0px;
     
         .form--h1 {
-            font-family: primaryfontregular;
+            font-family: primaryfontdemi;
             font-size: 36px;
         }
         
+    }
+
+    #comments, #name {
+        width: 110%;
     }
 
     form {
@@ -323,7 +334,6 @@ form {
     .leftPanelImg {
         width: 48px;
         height: 48px;
-        // height: 60px;
         float: left;
         position: relative;
         bottom: -10px;
@@ -331,43 +341,35 @@ form {
         
     
         img {
-            width: 100%;
+            width: 82%;
             border-radius: 50%;
+            height: 36px;
         }
     
         span {
             img {
                 position: relative;
-                bottom: -20px;
+                bottom: -10px;
             }
         }
+        
     }
 
-    .rightPanel {
-        margin-left: 1%;
-        width: 70%;
-    }
-
-    .commentcontainer {
-        p {
-            font-size: 16px;
-        }
     
-        h3 {
-            margin: 0;
-            font-size: 16px;
-        }
+
     
-        .date {
-            font-size: 16px;
-            color: #afafaf;
-        }
+
+    #commentcontainer1 {
+        margin: 0 100px;
     }
 
-    .commentcontainer1 {
-        margin-left: 120px;
+    .addAComment {
+        width: 30%;
+        border-radius: 5%;
+        position: relative;
+        left: 81%;
+    
     }
-
 }
 
 
@@ -412,17 +414,19 @@ form {
                 font-family: primaryfontregular;
                 font-size: 36px;
             }
+            #name{
+                height: 60px;
+            }
             
         }
     
         form {
-            margin: 0 200px 0 318px;
+            margin: 0 349px 0 385px;
         }
     
         .leftPanelImg {
             max-width: 48px;
             max-height: 48px;
-            // height: 60px;
             float: left;
             position: relative;
             bottom: -10px;
@@ -432,12 +436,16 @@ form {
             img {
                 width: 100%;
                 border-radius: 50%;
+                
             }
         
             span {
                 img {
                     position: relative;
                     bottom: -10px;
+                    height: 146%;
+                    width: 155%;
+                    left: 30px;
                 }
             }
         }
@@ -446,11 +454,24 @@ form {
             margin-left: 1%;
             width: 50%;
         }
-    
-        .commentcontainer1 {
-            margin-left: 325px;
-        }
+        #commentcontainer1{
+            margin: 0 426px 0 426px;
+            .backgroundavatar{
+                height: 70px;
+                max-width: 70px;
+            }
 
+            .comment--namedates{
+                margin-left: 84px;
+            }
+            .comment--body{
+                margin: 0 0 0 84px;
+            }
+
+            .likes{
+                margin: 8px 0 8px 84px;
+            }
+        }
 }
 
 

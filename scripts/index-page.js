@@ -1,41 +1,83 @@
-let comment = [
-    {"name": "Connor Walton", 
-     "date": "02/17/2021", 
-     "body":"This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains."},
+let myKey = "6e49b848-3d3c-4077-85d1-71b97dd1c437";
+let anotherKey = "67fb32cb-931e-4d9a-80bd-4d8639fba77b";
+
+let n = axios.get(`https://project-1-api.herokuapp.com/comments?api_key=${myKey}`)
+
+n.then((data) =>{
+    return data.data
+}).then((completeData)=>{
     
-    {"name": "Emilie Beach", 
-     "date": "01/09/2021", 
-     "body":"I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day."},
-    
-    {"name": "Miles Acosta",
-     "date": "12/20/2020", 
-     "body":"I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough."},
-];
+    let data1 = "";
+    completeData.map((values)=>{
 
-// let displayContent = document.getElementById("commentcontainer")
+        let d = new Date(values.timestamp);
+        let formattedDate = d.getDay() + "-" + (d.getMonth() + 1) + "-" + d.getFullYear();
+        let dateString= formattedDate;
+        dateString = new Date(dateString).toUTCString();
+        dateString = dateString.split(' ').slice(0, 4).join(' ');
+        
 
-// displayContent.innerText = 'Connor Walton' + '02/17/2021' + 'This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.'
+        data1+=`
 
-// let divElement = document.createElement('div');
+        <canvas class="backgroundavatar"></canvas>
+        <div class="comment--namedates">
+        
+        <p class="comment--names">${values.name}</p>
+        <p class="comment--dates">${formattedDate}</p>
+        </div>
+        <p class="comment--body">${values.comment}</p>
+        <p class="likes">${values.likes}</p>   
+        <div class="underline"></div>
+    `;
 
-// let addComment = document.createTextNode('This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.');
+    })
 
-// divElement.appendChild(addComment);
+    document.getElementById("commentcontainer1").innerHTML=data1;
+}).catch((err)=> {
+    console.log(err);
+})
 
-// let containerDiv = document.querySelector('.commentcontainer');
 
 const form = document.querySelector('form');
-const commentSection = document.querySelector ('.commentcontainer1')
+const commentSection = document.querySelector ('#commentcontainer1')
 
-function addAComment(e) {
+
+
+const headers = {
+    headers:{
+    'content-type': 'application/json',
+    }
+  }
+
+
+
+function addAComment(e){
     e.preventDefault();
-    const name = document.getElementById("name").value;
+    const names = document.getElementById("name").value;
     const comments = document.getElementById("comments").value;
-    commentSection.innerHTML += `
-        <h3>${name}</h3>
-        <p>${comments}</p>
+    
+let h = axios.post(`https://project-1-api.herokuapp.com/comments?api_key=${myKey}`, {
+    "name" : `${names}`,
+    "comment": `${comments}`,
+    
+}, headers )
+h.then((data) =>{
+    location.reload()
+    data.data.push(H)
+})
 
-    `;
 }
+form.addEventListener('submit', addAComment)
 
-form.addEventListener('submit', addAComment);
+async function addADeleteBtn(){
+    let commentcontainer1 = await n;
+    const clickDelete = document.querySelectorAll(".delete_button");
+    for (var i= 0; i <clickDelete.length; i++){
+        clickDelete[i].addEventListener('click', (event)=>{
+            console.log(id)
+            if(window.confirm('close it?')){
+                axios.delete()
+            }
+        })
+    }
+}
