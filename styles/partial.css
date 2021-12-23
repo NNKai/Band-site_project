@@ -178,10 +178,6 @@ footer p {
     margin-right: 24px;
   }
 
-  #footer--maincontainer {
-    margin: 0 128px;
-  }
-
   .footer--contacts {
     display: flex;
     justify-content: flex-start;
@@ -199,5 +195,9 @@ footer p {
   footer .headerfooter--logo {
     left: 76%;
     top: -216px;
+  }
+
+  footer #footer--maincontainer {
+    margin: 0 128px;
   }
 }/*# sourceMappingURL=partial.css.map */

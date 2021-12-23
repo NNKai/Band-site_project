@@ -193,6 +193,8 @@ footer {
     }
 }
 
+
+
 @media (min-width: $desktop) {
     .heroimage img {
         max-height: 600px;
@@ -210,9 +212,7 @@ footer {
         margin-right: 24px;
     }
     
-    #footer--maincontainer {
-        margin: 0 128px;
-    }
+   
 
     .footer--contacts {
         display: flex;
@@ -233,6 +233,12 @@ footer {
         top: -216px;
     }
 
+    footer{
+
+    #footer--maincontainer {
+        margin: 0 128px;
+    }
+    }
 }
 
 
