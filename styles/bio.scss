@@ -22,6 +22,12 @@ $bordercolor: #E1E1E1;
     src: url("../3.0\ -\ Assets/font/AvenirNextLTPro-Demi.otf");
 }
 
+.underline{
+    border-bottom: solid 1px #AFAFAF;
+    opacity: 50%;
+    width: 100%;
+}
+
 .heroimage {
     background-color: #323232;
     display: flex;

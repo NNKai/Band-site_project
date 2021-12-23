@@ -63,7 +63,7 @@ let h = axios.post(`https://project-1-api.herokuapp.com/comments?api_key=${myKey
 }, headers )
 h.then((data) =>{
     location.reload()
-    data.data.push(H)
+    names.forEach(input => names.value = '');
 })
 
 }
